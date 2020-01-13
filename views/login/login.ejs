@@ -1,0 +1,49 @@
+<%- include('header') -%>
+
+<body>
+    <div class="login-content">
+        <!-- IMAGE -->
+        <div class="login-content__image">
+            <img class="login-content__image--modifier"
+                src="https://res.cloudinary.com/dkdmgncru/image/upload/v1578932744/Beacon%20Files/Other%20Imgs%2BVideos/login1_fkclza.jpg"
+                alt="Login">
+        </div>
+
+        <!-- LOGIN-FORM -->
+        <div class="login-content__form">
+            <!-- TITLE -->
+            <div class="login-content__form--title u-class-center u-margin-bottom-small">
+                <h2 class="heading-type-2">
+                    Login
+                </h2>
+            </div>
+            <!-- IMAGE -->
+            <div class="login-content__form--profile">
+                <img class="login-content__form--profile--modifier"
+                    src="https://res.cloudinary.com/dkdmgncru/image/upload/f_auto,q_auto/v1570381661/Beacon%20Files/Icons/profile_hserdg.png"
+                    alt="Img">
+            </div>
+            <!-- INPUT FIELDS -->
+            <form action="/user/login" method="POST">
+                <div class="login-content__form--field">
+                    <!-- Email-Id-->
+                    <input type="email" name="email" class="login-content__form--field--input" id="email-id2" required
+                        placeholder="Email-Id">
+                    <label for="email-id2" class="login-content__form--field--label">Email-Id</label>
+                    <!-- Password-->
+                    <input type="password" name="password" class="login-content__form--field--input" id="password"
+                        required placeholder="Password">
+                    <label for="password" class="login-content__form--field--label">Password</label>
+                </div>
+
+                <!-- PROCEED-BTN -->
+                <div class="login-content__form--proceed">
+                    <!-- Proceed Button-->
+                    <input type="submit" value="Login"
+                        class="btn-proceed login-content__form--proceed--modifier"></input>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <%- include('footer') -%>

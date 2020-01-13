@@ -1,0 +1,82 @@
+<%- include('header') -%>
+
+<body>
+    <div class="signup-content">
+        <!-- IMAGE -->
+        <div class="signup-content__image">
+            <img class="signup-content__image--modifier"
+                src="https://res.cloudinary.com/dkdmgncru/image/upload/f_auto,q_auto/v1574930798/Beacon%20Files/Other%20Imgs%2BVideos/signup_brreic.png"
+                alt="signup">
+        </div>
+
+        <!-- SIGNUP-FORM -->
+        <div class="signup-content__form">
+            <!-- TITLE -->
+            <div class="signup-content__form--title u-class-center u-margin-bottom-small">
+                <h2 class="heading-type-2">
+                    Member Signup
+                </h2>
+            </div>
+
+            <!-- IMAGE -->
+            <div class="signup-content__form--profile">
+                <img class="signup-content__form--profile--modifier"
+                    src="https://res.cloudinary.com/dkdmgncru/image/upload/f_auto,q_auto/v1570381661/Beacon%20Files/Icons/profile_hserdg.png"
+                    alt="Img">
+            </div>
+
+            <form action="/verify" method="POST">
+
+                <!-- INPUT FIELDS -->
+                <div class="signup-content__form--field">
+                    <!-- NAME-->
+                    <input type="text" class="signup-content__form--field--input" name='name' id="name2"
+                        placeholder="Name" required>
+                    <label for="name2" class="signup-content__form--field--label">Name</label>
+                    <!-- EMAIL-ID-->
+                    <input type="email" name='email' class="signup-content__form--field--input" id="email-id1"
+                        placeholder="Email-Id" required>
+                    <label for="email-id1" class="signup-content__form--field--label">Email-Id</label>
+                    <!-- CONTACT NO -->
+                    <input type="password" name='password' class="signup-content__form--field--input" id="Password"
+                        placeholder="Password" required>
+                    <label for="Contact-No" class="signup-content__form--field--label">Password</label>
+                    <input type="password" name='confirmPassword' class="signup-content__form--field--input"
+                        id="Confirm_Password" placeholder="Confirm Password" required>
+                    <label for="Confirm_Password" class="signup-content__form--field--label">Confirm_Password</label>
+                </div>
+
+                <!-- RADIO BTN -->
+                <div class="signup-content__form--radio">
+                    <div class="signup-content__form--radio--content">
+                        <input type="radio" class="signup-content__form--radio--input" id="Student" name="role"
+                            value='student' required>
+                        <label class="signup-content__form--radio--label" for="Student">
+                            <span class="signup-content__form--radio--button"></span>
+                            STUDENT
+                        </label>
+                    </div>
+
+
+                    <div class="signup-content__form--radio--content">
+                        <input type="radio" class="signup-content__form--radio--input" id="Faculty" name="role"
+                            value='faculty' required>
+                        <label class="signup-content__form--radio--label" for="Faculty">
+                            <span class="signup-content__form--radio--button"></span>
+                            FACULTY
+                        </label>
+                    </div>
+                </div>
+
+                <!-- PROCEED-BTN -->
+                <div class="signup-content__form--proceed">
+                    <!-- Proceed Button-->
+                    <button type="submit"> <a class="btn-proceed signup-content__form--proceed--modifier"
+                            target="_blank">Receive
+                            OTP</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <%- include('footer') -%>

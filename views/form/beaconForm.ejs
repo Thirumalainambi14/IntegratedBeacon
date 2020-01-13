@@ -1,0 +1,156 @@
+<%- include('header') -%>
+
+<body style="font-family: Lato; margin-top: 30px;">
+    <div class="container">
+        <!--Form Heading-->
+        <div class="row">
+            <div class="col m4">
+                <img class="responsive-img hide-on-medium-and-up" style="border: 1px solid orange;"
+                    src="https://res.cloudinary.com/dkdmgncru/image/upload/f_auto,q_auto/v1574932187/Beacon%20Files/Other%20Imgs%2BVideos/logo_u6hhkh.png"
+                    alt="Logo">
+            </div>
+
+            <div class="col m8">
+                <p class="orange-text center" style="margin: 0px;">
+                    THE SOUTH INDIAN EDUCATION SOCIETY'S
+                </p>
+                <h5 class="orange-text center" style="margin-top: 0px;">
+                    GRADUATE SCHOOL OF TECHNOLOGY
+                </h5>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <!--Form Content-->
+        <div class="row">
+            <div class="col m6">
+                <img src="https://res.cloudinary.com/dkdmgncru/image/upload/q_auto,f_auto/v1574930796/Beacon%20Files/Other%20Imgs%2BVideos/education_t9veyk.jpg"
+                    alt="Student-Form-Image" class="responsive-img">
+            </div>
+            <div class="col m6">
+                <h6 class="center">Fill Following Details</h6>
+                <p class="center red-text">* Marked Fields Are Compulsory.</p>
+                <form action="/user/data/<%= user.userId %>" method="POST">
+                    <!-- FIRST NAME & LAST NAME -->
+                    <div class="row">
+                        <div class="input-field col m6">
+                            <input id="first_name" name="firstname" type="text" class="validate" required>
+                            <label for="first_name">First Name*</label>
+                        </div>
+                        <div class="input-field col m6">
+                            <input id="last_name" name="lastname" type="text" class="validate" required>
+                            <label for="last_name">Last Name*</label>
+                        </div>
+                    </div>
+
+                    <!-- DOB -->
+                    <div class="row">
+                        <div class="input-field col">
+                            <input type="text" name="dob" id="DOB" class="datepicker" required>
+                            <label for="DOB">Date Of Birth*</label>
+                        </div>
+                    </div>
+
+                    <!-- EDUCATION QUALIFICATION -->
+                    <div class="row">
+                        <div class="input-field col m12">
+                            <input type="text" id="Edu-Qualification" name="educationalQualification" class="validate"
+                                required />
+                            <label for="Edu-Qualification">Education Qualification*</label>
+                        </div>
+                    </div>
+
+                    <!-- RELIGION & CASTE -->
+                    <div class="row">
+                        <div class="input-field col">
+                            <input type="text" name="religion" id="religion" required>
+                            <label for="religion">Religion & Caste Details*</label>
+                        </div>
+                    </div>
+
+                    <!-- ADDERSS -->
+                    <div class="row">
+                        <div class="input-field col m6">
+                            <textarea id="present-address" name="presentAdd" class="materialize-textarea"
+                                required></textarea>
+                            <label for="present-address">Present Address*</label>
+                        </div>
+                        <div class="input-field col m6">
+                            <textarea id="permanent-address" name="permanentAdd" class="materialize-textarea"
+                                required></textarea>
+                            <label for="permanent-address">Permanent Address*</label>
+                        </div>
+                    </div>
+                    <!-- RESIDENCE TYPE -->
+                    <div class="row">
+                        <div class="input-field col m6">
+                            <select name="residencetype">
+                                <option value="" disabled selected>Select</option>
+                                <option value="1">Own</option>
+                                <option value="2">Rental</option>
+                                <option value="3">Flat</option>
+                                <option value="4">Chawl</option>
+                                <option value="5">Slum</option>
+                            </select>
+                            <label>Residence Type*</label>
+                        </div>
+                        <!-- Working -->
+                        <div class="input-field col m6">
+                            <select name="working">
+                                <option value="" disabled selected>Select</option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                            </select>
+                            <label>Working*</label>
+                        </div>
+                    </div>
+
+                    <!-- INCOME RANGE -->
+                    <div class="row">
+                        <div class="input-field col">
+                            <input type="number" name="income" id="income" class="validate">
+                            <label for="income">Income Per Annum</label>
+                        </div>
+                    </div>
+
+                    <!-- CONTACT NUMBER -->
+                    <div class="row">
+                        <div class="input-field col m6">
+                            <input type="number" id="contact-1" name="contact1" class="validate" required>
+                            <label for="contact-1">Contact-No (1)*</label>
+                        </div>
+                        <div class="input-field col m6">
+                            <input type="number" id="contact-2" name="contact2" class="validate">
+                            <label for="contact-2">Contact-No (2)</label>
+                        </div>
+                    </div>
+
+                    <!-- COURSE PREFERENCE -->
+                    <div class="row">
+                        <div class="input-field col">
+                            <select multiple name="coursePref">
+                                <option value="" disabled>Select</option>
+                                <option value="1">Electrician</option>
+                                <option value="2">Web-Designing</option>
+                                <option value="3">Welding & Metal Turing</option>
+                                <option value="4">Sweaing & Tailoring</option>
+                                <option value="5">Computer Operator</option>
+                                <option value="6">Basic AC Mechanic</option>
+                                <option value="7">Screen Printing</option>
+                                <option value="8">Plumbing</option>
+                            </select>
+                            <label>Course Preference*</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col center">
+                            <!-- Button -->
+                            <button class="btn orange" type="submit"><a class="white-text">Submit</a></button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include('footer') -%>

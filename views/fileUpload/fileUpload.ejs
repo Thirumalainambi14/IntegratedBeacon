@@ -1,0 +1,101 @@
+<%- include('header') -%>
+
+<body style="font-family: Lato; margin-top: 30px;">
+    <div class="container">
+        <!--Form Heading-->
+        <div class="row">
+            <div class="col m4">
+                <img class="responsive-img hide-on-medium-and-up" style="border: 1px solid orange;"
+                    src="https://res.cloudinary.com/dkdmgncru/image/upload/f_auto,q_auto/v1574932187/Beacon%20Files/Other%20Imgs%2BVideos/logo_u6hhkh.png"
+                    alt="Logo">
+            </div>
+
+            <div class="col m8">
+                <p class="orange-text center" style="margin: 0px;">
+                    THE SOUTH INDIAN EDUCATION SOCIETY'S
+                </p>
+                <h5 class="orange-text center" style="margin-top: 0px;">
+                    GRADUATE SCHOOL OF TECHNOLOGY
+                </h5>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <!--Form Content-->
+        <div class="row">
+            <div class="col m5">
+                <img src="https://res.cloudinary.com/dkdmgncru/image/upload/f_auto,q_auto/v1574930798/Beacon%20Files/Other%20Imgs%2BVideos/upload-1_cliw0b.jpg"
+                    alt="Upload-Image" class="responsive-img">
+            </div>
+            <div class="col m7">
+                <h6 class="center">Upload Documents</h6>
+                <p class="center red-text">* Marked Fields Are Compulsory.</p>
+                <form action="/user/fileupload/<%= user.userId %>" method="POST" enctype="multipart/form-data">
+                    <!-- Individual's Photo  -->
+                    <div class="file-field input-field" style="margin-top:3rem; margin-bottom:1rem">
+                        <div class="btn">
+                            <span class="btn-tags">Upload Photo</span>
+                            <input name="images" type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" placeholder="Upload in JPG/JPEG Format*" type="text"
+                                required>
+                        </div>
+                    </div>
+                    <!-- Income Proof -->
+                    <div class="file-field input-field" style="margin-top:3rem; margin-bottom:1rem">
+                        <div class="btn">
+                            <span class="btn-tags">Income Proof</span>
+                            <input type="file" name="income">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" placeholder="Upload in PDF format* " type="text" required>
+                        </div>
+                    </div>
+                    <!-- Adhaar Card -->
+                    <div class="file-field input-field" style="margin-top:3rem; margin-bottom:1rem">
+                        <div class="btn">
+                            <span class="btn-tags">Adhaar Proof</span>
+                            <input type="file" name="adhaar">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" placeholder="Upload in PDF format*" type="text" required>
+                        </div>
+                    </div>
+                    <!-- Address Proof -->
+                    <div class="file-field input-field" style="margin-top:3rem; margin-bottom:1rem">
+                        <div class="btn">
+                            <span class="btn-tags">Address Proof</span>
+                            <input type="file" name="addressProof">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" placeholder="Upload in PDF format*" type="text" required>
+                        </div>
+                    </div>
+                    <!-- Education Qualification -->
+                    <div class="file-field input-field" style="margin-top:3rem; margin-bottom:2rem">
+                        <div class="btn">
+                            <span class="btn-tags">Education Proof</span>
+                            <input type="file" name="educationalProof">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate"
+                                placeholder="Upload in PDF format* [Multiple files are accepted]" type="text" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col center">
+                            <!-- Button -->
+                            <button class="btn orange" type="submit">
+                                <!-- <a href="https://res.cloudinary.com/dkdmgncru/image/upload/v1574944173/Beacon%20Files/PDF%27s/Undertaking-Form_telcer.pdf"
+                                    class="white-text">Upload &amp; Submit</a> -->
+                                Upload and Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('footer') -%>

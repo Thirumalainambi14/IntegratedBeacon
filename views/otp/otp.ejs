@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Enter OTP</title>
+    <link rel="stylesheet" href="../stylesheets/styles.css">
+    <link rel="shortcut icon" type="image/png"
+        href="https://res.cloudinary.com/dkdmgncru/image/upload/f_auto,q_auto/v1574928333/Beacon%20Files/favicon%20%2B%20logo/Favicon.png">
+</head>
+
+<body>
+    <div class="otp-content">
+        <!-- IMAGE -->
+        <div class="otp-content__image">
+            <img class="otp-content__image--modifier"
+                src="https://res.cloudinary.com/dkdmgncru/image/upload/f_auto,q_auto/v1574931794/Beacon%20Files/Other%20Imgs%2BVideos/otp_pd1lyl.png"
+                alt="otp">
+        </div>
+
+        <!--OTP FORM  -->
+        <div class="otp-content__form">
+            <!-- TITLE -->
+            <div class="otp-content__form--title u-class-center u-margin-bottom-small">
+                <h2 class="heading-type-2">
+                    Enter-OTP
+                </h2>
+            </div>
+            <form action="/signup" method="POST">
+                <!-- OTP-FIELD -->
+                <input type="hidden" name="name" id="name" value='<%= user.name %>'>
+                <input type="hidden" name="email" id="email" value='<%= user.email %>'>
+                <input type="hidden" name="password" id="password" value='<%= user.password %>'>
+                <input type="hidden" name="role" id="role" value='<%= user.role %>'>
+
+                <div class="otp-content__form--field">
+                    <input type="text" name='verifyToken' class="otp-content__form--field--input" id="otp"
+                        placeholder="Enter OTP" required>
+                    <label for="otp" class="otp-content__form--field--label">Enter OTP</label>
+                </div>
+
+                <!-- PROCEED-BTN -->
+                <div class="otp-content__form--proceed">
+                    <button type="submit">
+                        <a href="/user/login" class="btn-proceed otp-content__form--proceed--modifier">Verify</a>
+
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
